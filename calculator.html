@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tax Calculator | Taxes and Takedowns</title>
+</head>
+<body>
+
+  <h1>Tax Calculator</h1>
+
+  <label for="income">Annual Gross Income ($)</label><br />
+  <input type="number" id="income" placeholder="e.g. 55000" min="0" /><br /><br />
+
+  <label for="status">Filing Status</label><br />
+  <select id="status">
+    <option value="single">Single</option>
+    <option value="married_joint">Married Filing Jointly</option>
+    <option value="married_sep">Married Filing Separately</option>
+    <option value="head">Head of Household</option>
+  </select><br /><br />
+
+  <button onclick="calculate()">Calculate</button>
+
+  <h2>Estimated Tax Owed: <span id="result">—</span></h2>
+
+</body>
+</html>
