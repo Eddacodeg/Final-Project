@@ -24,5 +24,87 @@
 
   <h2>Estimated Tax Owed: <span id="result">—</span></h2>
 
+  <script>
+    function calculate() {
+      var income = parseFloat(document.getElementById("income").value);
+      var status = document.getElementById("status").value;
+
+      if (isNaN(income) || income < 0) {
+        alert("Please enter a valid income.");
+        return;
+      }
+
+      // Standard deductions
+      var deductions = {
+        single: 13850,
+        married_joint: 27700,
+        married_sep: 13850,
+        head: 20800
+      };
+
+      // Tax brackets [rate, up to this amount]
+      var brackets = {
+        single: [
+          [0.10, 11600],
+          [0.12, 47150],
+          [0.22, 100525],
+          [0.24, 191950],
+          [0.32, 243725],
+          [0.35, 609350],
+          [0.37, Infinity]
+        ],
+        married_joint: [
+          [0.10, 23200],
+          [0.12, 94300],
+          [0.22, 201050],
+          [0.24, 383900],
+          [0.32, 487450],
+          [0.35, 731200],
+          [0.37, Infinity]
+        ],
+        married_sep: [
+          [0.10, 11600],
+          [0.12, 47150],
+          [0.22, 100525],
+          [0.24, 191950],
+          [0.32, 243725],
+          [0.35, 365600],
+          [0.37, Infinity]
+        ],
+        head: [
+          [0.10, 16550],
+          [0.12, 63100],
+          [0.22, 100500],
+          [0.24, 191950],
+          [0.32, 243700],
+          [0.35, 609350],
+          [0.37, Infinity]
+        ]
+      };
+
+      // Subtract standard deduction
+      var taxable = income - deductions[status];
+      if (taxable < 0) taxable = 0;
+
+      // Calculate tax
+      var tax = 0;
+      var prev = 0;
+      var selectedBrackets = brackets[status];
+
+      for (var i = 0; i < selectedBrackets.length; i++) {
+        var rate = selectedBrackets[i][0];
+        var cap  = selectedBrackets[i][1];
+
+        if (taxable <= prev) break;
+
+        var chunk = Math.min(taxable, cap) - prev;
+        tax += chunk * rate;
+        prev = cap;
+      }
+
+      document.getElementById("result").textContent = "$" + Math.round(tax).toLocaleString();
+    }
+  </script>
+
 </body>
 </html>
