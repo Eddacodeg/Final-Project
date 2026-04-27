@@ -17,8 +17,6 @@
   <input type="submit" value="Submit">
  </form>
 
-
-
   <script>
 
   var questions = [
@@ -27,13 +25,12 @@
   { question: "What does IRS stand for?", answer: "internal revenue service" }
   ];
 
-  var current = questions[Math.floor(Math.random() * questions.length)];
-
-  document.getElementById("question").textContent = current.question;
 
   current = questions[Math.floor(Math.random() * questions.length)];
   document.getElementById("question").textContent = current.question;
   document.getElementById("answer").value = "";
+
+  var current = questions[Math.floor(Math.random() * questions.length)];
 
   function checkAnswer(event) {
   event.preventDefault();

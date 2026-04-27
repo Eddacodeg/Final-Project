@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+<body>
+    <h1>Articles</h1>
+
+    <h2>Understanding Taxes</h2>
+    <ul>
+        <li><a href="https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_taxes-understanding-basics_handout.pdf">Understanding what taxes are and how they work</a></li>
+        <li><a href="https://apps.irs.gov/app/understandingTaxes/student/tax_tutorials.jsp">Understanding Taxes step by step</a></li>
+    </ul>
+
+    <h2>How Taxes Work</h2>
+    <ul>
+        <li><a href="https://www.irs.gov/individuals/international-taxpayers/taxation-of-us-residents">Understanding How does taxes work around the US</a></li>
+        <li><a href="https://www.hrblock.com/tax-center/income/other-income/income-tax/">Why do we pay taxes and their use</a></li>
+    </ul>
+
+    <h2>Filing Taxes</h2>
+    <ul>
+        <li><a href="https://www.irs.gov/filing/individuals/how-to-file">Understanding how to file your taxes</a></li>
+        <li><a href="https://www.usa.gov/file-taxes">Step by Step instructions on filing taxes</a></li>
+    </ul>
+
+    <h2>Tax Deductions and Credits</h2>
+    <ul>
+        <li><a href="https://www.irs.gov/credits-and-deductions-for-individuals">Understanding tax deductions and credits</a></li>
+        <li><a href="https://turbotax.intuit.com/tax-tips/fun-facts/9-things-you-didnt-know-were-tax-deductions/L6M1dynSH">Common Tax Deduction Examples</a></li>
+    </ul>
+    
+</body>
+</html>
