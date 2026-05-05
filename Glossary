@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Glossary | Taxes and Takedowns</title>
+</head>
+<body>
   <nav>
   <a href="index.html">Home</a>
   <a href="calculator.html">Calculator</a>
@@ -8,13 +14,7 @@
   <a href="quiz.html">Games</a>
   <a href="glossary.html">Glossary</a>
   <a href="sources.html">Sources</a>
-</nav>
-<link rel="stylesheet" href="style/style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tax Glossary | Taxes and Takedowns</title>
-</head>
-<body>
+  </nav>
 
   <h1>Tax Glossary</h1>
 
